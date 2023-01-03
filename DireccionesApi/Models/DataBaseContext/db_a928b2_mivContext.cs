@@ -1,23 +1,18 @@
 ﻿using System;
-using DireccionesApi.Models.VM;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.Extensions.Options;
 
 #nullable disable
 
-namespace DireccionesApi.Models.DataBaseContext
+namespace DireccionesApi.Models
 {
-    public partial class Direcciones_SPAContext : DbContext
+    public partial class db_a928b2_mivContext : DbContext
     {
-      
-        public Direcciones_SPAContext()
+        public db_a928b2_mivContext()
         {
-            
         }
 
-
-        public Direcciones_SPAContext(DbContextOptions<Direcciones_SPAContext> options)
+        public db_a928b2_mivContext(DbContextOptions<db_a928b2_mivContext> options)
             : base(options)
         {
         }
@@ -28,19 +23,19 @@ namespace DireccionesApi.Models.DataBaseContext
         {
             if (!optionsBuilder.IsConfigured)
             {
-
-                optionsBuilder.UseSqlServer("Data Source=DESKTOP-G17J7E9;Initial Catalog=Direcciones_SPA;Integrated Security=True");
+                //TODO ocultar
+                optionsBuilder.UseSqlServer("Data Source=SQL8004.site4now.net;Initial Catalog=db_a928b2_miv;User Id=db_a928b2_miv_admin;Password=slinki20");
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasAnnotation("Relational:Collation", "Modern_Spanish_CI_AS");
+            modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
 
             modelBuilder.Entity<Direccione>(entity =>
             {
                 entity.HasKey(e => e.DireccionesId)
-                    .HasName("PK__Direccio__660C0A701C8A6AD2");
+                    .HasName("PK__Direccio__660C0A70ECB0E903");
 
                 entity.Property(e => e.DireccionesId).HasColumnName("Direcciones_Id");
 

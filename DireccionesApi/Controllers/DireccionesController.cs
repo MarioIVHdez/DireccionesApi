@@ -1,5 +1,5 @@
 ﻿using DireccionesApi.Interfaces;
-using DireccionesApi.Models.DataBaseContext;
+using DireccionesApi.Models;
 using DireccionesApi.Models.VM;
 using Microsoft.AspNetCore.Mvc;
 using System;

@@ -1,4 +1,5 @@
-﻿using DireccionesApi.Models.DataBaseContext;
+﻿
+using DireccionesApi.Models;
 using DireccionesApi.Models.VM;
 using System;
 using System.Collections.Generic;

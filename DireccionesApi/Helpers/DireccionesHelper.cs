@@ -1,5 +1,5 @@
 ﻿using DireccionesApi.Interfaces;
-using DireccionesApi.Models.DataBaseContext;
+using DireccionesApi.Models;
 using DireccionesApi.Models.VM;
 using System;
 using System.Collections.Generic;
@@ -17,7 +17,7 @@ namespace DireccionesApi.Helpers
             try
             {
              
-                using (var context = new Direcciones_SPAContext())
+                using (var context = new db_a928b2_mivContext())
                 {
                      obj = (from d in context.Direcciones select d).ToList();
                 }
@@ -41,7 +41,7 @@ namespace DireccionesApi.Helpers
             try
             {
                 Direccione obj = new Direccione();
-                using (var context = new Direcciones_SPAContext())
+                using (var context = new db_a928b2_mivContext())
                 {
                      obj = (from d in context.Direcciones where d.DireccionesId == id select d).FirstOrDefault();
                 }
@@ -64,7 +64,7 @@ namespace DireccionesApi.Helpers
             try
             {
                
-                using (var context = new Direcciones_SPAContext())
+                using (var context = new db_a928b2_mivContext())
                 {
                      obj.FechaCreacion = DateTime.Now;
                      context.Direcciones.Add(obj);
@@ -90,7 +90,7 @@ namespace DireccionesApi.Helpers
             try
             {
                 Direccione objFind = new Direccione();
-                using (var context = new Direcciones_SPAContext())
+                using (var context = new db_a928b2_mivContext())
                 {
                     objFind = (from d in context.Direcciones where d.DireccionesId == DireccionId select d).FirstOrDefault();
                     objFind.AliasDireccion = obj.AliasDireccion;
@@ -128,7 +128,7 @@ namespace DireccionesApi.Helpers
             try
             {
                 Direccione objFind = new Direccione();
-                using (var context = new Direcciones_SPAContext())
+                using (var context = new db_a928b2_mivContext())
                 {
                     objFind = (from d in context.Direcciones where d.DireccionesId == DireccionId select d).FirstOrDefault();
                     

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace DireccionesApi.Models.DataBaseContext
+namespace DireccionesApi.Models
 {
     public partial class Direccione
     {
